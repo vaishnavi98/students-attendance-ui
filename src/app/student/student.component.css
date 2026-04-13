@@ -1,0 +1,144 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+h1{
+    text-align:center;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 50%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+button {
+  padding: 8px 14px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.add-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #e53935;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #35e5b9;
+  color: white;
+}
+
+.student-card {
+  background: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 20px;
+}
+
+.content-card {
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  width: 450px;
+  border: 1px solid rgba(255,255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* MAIN LAYOUT */
+.page-layout {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* LEFT HALF */
+.left-panel {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RIGHT HALF */
+.right-panel {
+  width: 50%;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* CAROUSEL CONTAINER */
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* CAROUSEL IMAGES */
+.carousel {
+  display: flex;
+  width: 300%; /* 3 images */
+  height: 100%;
+  animation: slide 20s infinite;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SLIDE ANIMATION */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}

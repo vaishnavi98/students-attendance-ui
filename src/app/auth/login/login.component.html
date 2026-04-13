@@ -1,0 +1,21 @@
+<div class="login-wrapper">
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+
+    <input 
+      type="text" 
+      placeholder="Username"
+      [(ngModel)]="username"
+    />
+
+    <input 
+      type="password" 
+      placeholder="Password"
+      [(ngModel)]="password"
+    />
+
+    <button (click)="login()" [disabled]="loading">
+      {{ loading ? 'Logging in...' : 'Login' }}
+    </button>
+  </div>
+</div>

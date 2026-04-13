@@ -1,0 +1,56 @@
+<div class="page-layout">
+
+  <!-- LEFT HALF: CAROUSEL -->
+  <div class="left-panel">
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="/images/college_image.jpg" alt="img1">
+        <img src="/images/college_stud_image.jpg" alt="img2">
+        <img src="/images/college_stud_image2.jpg" alt="img3">
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT HALF: FORM + LIST -->
+  <div class="right-panel">
+    <div class="page-container">
+      <div class="content-card">
+        <div class="container">
+
+          <h1>Student Management Application</h1>
+          <h3>Add Student</h3>
+
+          <label>Name:</label>
+          <input [(ngModel)]="newStudent.name" placeholder="Name" />
+
+          <label>Age:</label>
+          <input type="number" [(ngModel)]="newStudent.age" placeholder="Age" />
+
+          <label>
+            <input type="checkbox" [(ngModel)]="newStudent.present" />
+            Mark if Present
+          </label>
+
+          <button class="add-btn" (click)="addStudent()">
+            {{ editingStudentId !== null ? 'Update Student' : 'Add Student' }}
+          </button>
+
+          <hr />
+
+          <div *ngFor="let student of students" class="student-card">
+            <div>
+              <strong>{{ student.name }}</strong>
+              ({{ student.age }}) -
+              {{ student.present ? 'Present' : 'Absent' }}
+            </div>
+
+            <button class="delete-btn" (click)="deleteStudent(student.id!)">Delete</button>
+            <button class="edit-btn" (click)="editStudent(student)">Edit</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
